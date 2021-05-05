@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+
+    <ul>
+        <li>@Html.RouteLink("Home", "Default", new { controller = "Home", action = "Index" }, null)</li>
+        <li>@Html.RouteLink("About us", "Default", new { controller = "Home", action = "About_us" }, null)</li>
+
+        <li>
+            Areas
+            <ul>
+                <li> @Html.RouteLink("Clients", "Clients_default", new { controller = "Home", action = "Index" }, null)</li>
+                <li> @Html.RouteLink("Employees", "Employees_default", new { controller = "Home", action = "Index" }, null)</li>
+            </ul>
+        </li>
+    </ul>
+
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>
